@@ -93,3 +93,13 @@ for loop_area in areas:
         print(f"Unexeptected format {type(loop_area)}")
 
 print(area["label"])
+
+data = set(zip(list_ids, list_name, list_timezone, list_label))
+
+with open("apiStropAreas.csv", "w") as file:
+    head = ["ids", "name", "time", "label"]
+    fileWriter = csv.writer(file, delimiter = ";" )
+    fileWriter.writerow(i for i in head)
+
+    for row in data:
+        fileWriter.writerow(row)
