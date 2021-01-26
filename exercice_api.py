@@ -11,7 +11,6 @@ import csv
 #     print(i)
 
 # f.close()
-# test 
 '''
 '''
 with open('stop_areas.json', "r") as read_file:
@@ -49,6 +48,20 @@ for loop_area in areas:
 
 print(len(list_ids))
 
-print(type(area),area)
-print(area.keys())
+# print(type(area),area)
+# print(area.keys())
 print(area["id"])
+
+list_name = []
+
+for loop_area in areas:
+    if type(loop_area) == dict:
+        if "name" in loop_area.keys():
+            local_name = loop_area["name"]
+            list_name.append(local_name)
+        else:
+            print("Missing key name")
+    else:
+        print(f"unexpected format {type(loop_area)}")
+
+print(area["name"])
