@@ -65,3 +65,17 @@ for loop_area in areas:
         print(f"unexpected format {type(loop_area)}")
 
 print(area["name"])
+
+list_timezone = []
+
+for loop_area in areas:
+    if type(loop_area) == dict:
+        if "timezone" in loop_area.keys():
+            local_timezone = loop_area["timezone"]
+            list_timezone.append(local_timezone)
+        else:
+            print("Missing key name")
+    else:
+        print(f"Unexpected format {type(loop_area)}")
+
+print(area["timezone"])
