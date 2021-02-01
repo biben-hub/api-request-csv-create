@@ -21,6 +21,10 @@ pp = pprint.PrettyPrinter(indent=4, width=80, compact=False)
 pp.pprint(data)
 '''
 #appel pour connexion à l'API +
+# d'abord on stock l'url avec son endpoint et ses authorization qu'on prend chez le fournissuer de l' API
+#on se crée une fonction qui va nous appeler l'api
+#récupérer les data de l'api et les ecrire dans un json
+#nous dire que la connexion est ok en nous renvoyant un message
 url = "https://api.sncf.com/v1/coverage/sncf/stop_areas"
 headers = {"Authorization" : "88829ffa-7c9c-4051-9990-9fdf9564a298"}
 response = requests.get(url, headers = headers)

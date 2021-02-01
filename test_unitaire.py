@@ -6,10 +6,7 @@ import os.path
 import tempfile
 import unittest
 
-def main():
 
-    url = "https://api.sncf.com/v1/coverage/sncf/stop_areas"
-    headers = {"Authorization": "e3f2b3a6-caa9-47d7-98ee-1f67379e654b"}
 #integration d'un test unitaire module écriture json
 class RmTestCase(unittest.TestCase):
 
