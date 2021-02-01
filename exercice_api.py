@@ -2,6 +2,10 @@ import json
 import pprint
 import requests
 import csv
+import logging
+
+logging.basicConfig(filename='logFile.log', level=logging.DEBUG)
+logging.info("Starting info")
 
 #appel pour connexion à l'API +
 url = "https://api.sncf.com/v1/coverage/sncf/stop_areas"
@@ -79,10 +83,12 @@ print(area["label"])
 
 data = set(zip(list_ids, list_name, list_timezone, list_label))
 
-with open("apiStropAreas.csv", "w") as file:
+with open("APIStropAreas.csv", "w") as file:
     head = ["ids", "name", "time", "label"]
     fileWriter = csv.writer(file, delimiter = ";" )
     fileWriter.writerow(i for i in head)
 
     for row in data:
         fileWriter.writerow(row)
+
+#soit on fait beautify soit on créer l'architecture de l'api dynamiquement

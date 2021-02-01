@@ -1,0 +1,6 @@
+INFO:root:Starting info
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.sncf.com:443
+DEBUG:urllib3.connectionpool:https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2414
+INFO:root:Starting info
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.sncf.com:443
+DEBUG:urllib3.connectionpool:https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2412
